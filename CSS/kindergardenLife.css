@@ -1,0 +1,220 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #eaf6ff 0%, #ffffff 70%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.life-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 24px 220px;
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================
+   INTRO
+========================= */
+.intro {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.intro h1 {
+  font-size: 40px;
+  color: #2b4f7c;
+  margin-bottom: 16px;
+}
+
+.intro p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.life-section {
+  margin-bottom: 56px;
+}
+
+.life-section h2 {
+  font-size: 26px;
+  color: #3a6ea5;
+  margin-bottom: 12px;
+}
+
+.life-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* =========================
+   CLOUDS
+========================= */
+.cloud {
+  position: absolute;
+  opacity: 0.85;
+  z-index: 1;
+  pointer-events: none;
+  animation: cloudMove linear infinite;
+}
+
+/* Cloud – top */
+.cloud-1 {
+  top: 8vh;
+  left: -35%;
+  width: 220px;
+  animation-duration: 90s;
+}
+
+/* Cloud – middle */
+.cloud-2 {
+  top: 35vh;
+  left: -45%;
+  width: 280px;
+  animation-duration: 120s;
+  animation-delay: -40s;
+}
+
+/* =========================
+   BIRDS
+========================= */
+.bird {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Bird 1 – LEFT ➜ RIGHT (top sky) */
+.bird-1 {
+  top: 25vh;
+  left: -20%;
+  width: 52px;
+  animation: birdFlyRight 30s linear infinite;
+}
+
+/* Bird 2 – RIGHT ➜ LEFT (middle sky) */
+.bird-2 {
+  top: 72vh;              /* ❗ FIXED */
+  right: -15%;
+  left: auto;
+  width: 46px;
+  animation: birdFlyLeftMid 36s linear infinite;
+  animation-delay: -12s;
+}
+
+/* Bird 3 – RIGHT ➜ LEFT (lower sky) */
+.bird-3 {
+  top: 105vh;              /* ❗ FIXED */
+  right: -20%;
+  left: auto;
+  width: 70px;
+  animation: birdFlyLeftLow 42s linear infinite;
+  animation-delay: -20s;
+}
+
+/* =========================
+   PLANT (LEAVE IT ALONE)
+========================= */
+.plant {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 180px;
+  z-index: 1;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes cloudMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(140vw);
+  }
+}
+
+/* Birds LEFT ➜ RIGHT */
+@keyframes birdFlyRight {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(140vw) translateY(-25px);
+  }
+}
+
+/* Birds RIGHT ➜ LEFT (middle) */
+@keyframes birdFlyLeftMid {
+  from {
+    transform: translateX(0) translateY(10px);
+  }
+  to {
+    transform: translateX(-140vw) translateY(-20px);
+  }
+}
+
+/* Birds RIGHT ➜ LEFT (low) */
+@keyframes birdFlyLeftLow {
+  from {
+    transform: translateX(0) translateY(15px);
+  }
+  to {
+    transform: translateX(-140vw) translateY(-10px);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .bird-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 32px;
+  }
+
+  .life-section h2 {
+    font-size: 22px;
+  }
+
+  .cloud {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .bird {
+    display: none;
+  }
+
+  .cloud-2 {
+    display: none;
+  }
+}

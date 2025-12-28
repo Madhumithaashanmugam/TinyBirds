@@ -1,0 +1,140 @@
+/* =========================
+   A DAY AT TINY BIRDS
+========================= */
+
+.aday-section {
+  position: relative;
+  padding: 120px 24px;
+  overflow: hidden;
+  background: #f9fdff;
+}
+
+/* BACKGROUND IMAGE */
+.aday-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.aday-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.aday-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.aday-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b3c5d;
+  margin-bottom: 60px;
+}
+
+/* CARDS WRAPPER */
+.aday-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* =========================
+   CARD BASE
+========================= */
+.aday-card {
+  background: #ffffff; /* CARD ALWAYS WHITE */
+  border-radius: 28px;
+  padding: 0 24px 36px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.aday-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   IMAGE AREA (COLORED)
+========================= */
+.card-image {
+  margin: 0 -24px 24px;
+  padding: 28px 24px;
+  display: flex;
+  justify-content: center;
+  border-radius: 28px 28px 0 0;
+}
+
+/* IMAGE */
+.card-image img {
+  width: 100%;
+  max-width: 220px;
+}
+
+/* IMAGE BACKGROUND COLORS */
+.card-yellow .card-image {
+  background: #FFDB7B;
+}
+
+.card-blue .card-image {
+  background: #9EC5FF;
+}
+
+.card-orange .card-image {
+  background: #FFB566;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+.aday-card h3 {
+  font-size: 29px;
+  font-weight: 700;
+  color: #003D58;
+  margin-bottom: 16px;
+}
+
+.aday-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.aday-card ul li {
+  font-size: 16px;
+  color: #003D58;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.card-btn {
+  display: inline-block;
+  padding: 10px 42px;
+  background: #51AAF9;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .aday-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .aday-title {
+    font-size: 26px;
+  }
+}

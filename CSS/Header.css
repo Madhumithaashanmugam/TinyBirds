@@ -1,0 +1,288 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --text-color: #565656;
+  --logo-color: #00B3FF;
+  --btn-gradient: linear-gradient(0deg, #2E89E4 0%, #55ABFF 100%);
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+
+  /* 👇 shadow under header */
+  box-shadow: 0 6px 20px rgba(59, 59, 59, 0.08);
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+.header-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 50px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 58px;
+}
+
+.logo-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--logo-color);
+}
+
+.logo-subtitle {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--logo-color);
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #FFC107;
+  border-radius: 2px;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+.cta-button {
+  padding: 12px 22px;
+  background: var(--btn-gradient);
+  color: #ffffff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #333;
+}
+
+/* =========================
+   DECOR BASE (ALL IMAGES)
+========================= */
+.decor {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.float-slow {
+  animation: floatY 7s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: floatXY 6s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: floatY 5s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatXY {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(10px, -10px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* =========================
+   CLOUDS (BOTTOM)
+========================= */
+.cloud-yellow-1 {
+  left: 0;
+  bottom: -25px;
+  width: 240px;
+}
+
+.cloud-yellow-2 {
+  left: 170px;
+  bottom: -15px;
+  width: 200px;
+}
+
+.cloud-white {
+  right: 260px;
+  bottom: -20px;
+  width: 220px;
+}
+
+.cloud-blue {
+  right: 190px;
+  bottom: -15px;
+  width: 200px;
+}
+
+/* =========================
+   ABC BLOCK
+========================= */
+.decor-abc {
+  right: 430px;
+  top: 65px;
+  width: 95px;
+}
+
+/* =========================
+   LEAVES (RIGHT SIDE)
+========================= */
+.leaf {
+  width: 48px;
+}
+
+.leaf-1 {
+      right: 125px;
+  top: 100px;
+}
+
+.leaf-2 {
+      right: 90px;
+  top: 100px;
+}
+
+.leaf-3 {
+      right: 45px;
+  top: 100px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 100px 24px;
+    gap: 20px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .main-nav.open {
+    right: 0;
+  }
+
+  /* Hide decor on small screens */
+  .decor {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

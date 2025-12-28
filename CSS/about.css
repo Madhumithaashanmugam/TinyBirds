@@ -1,0 +1,347 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* =====================
+   ABOUT HERO
+===================== */
+.about-hero {
+  position: relative;
+  background: linear-gradient(180deg, #fffbf3 0%, #fff0c1 100%);
+  padding: 6rem 1.5rem 5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-hero-content {
+  max-width: 720px;
+  margin: auto;
+}
+
+.about-badge {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(0deg, #dcf3ff, #d1efff);
+  border-radius: 999px;
+  color: #113f66;
+  font-weight: 600;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  color: #014680;
+  margin: 1.5rem 0 1rem;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  color: #004885;
+}
+
+/* Decorative */
+.cloud {
+  position: absolute;
+  width: 120px;
+}
+
+.cloud-left { top: 20%; left: -40px; }
+.cloud-right { top: 10%; right: -40px; }
+
+.birds {
+  position: absolute;
+  width: 140px;
+  top: 65%;
+  right: 10%;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.about-section {
+  padding: 5rem 1.5rem;
+}
+
+.soft-bg {
+  background: #fffaf2;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.split.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-text h2 {
+  color: #014680;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: #444;
+  line-height: 1.7;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+/* =====================
+   PHILOSOPHY
+===================== */
+.center {
+  text-align: center;
+}
+
+.center-text {
+  max-width: 720px;
+  margin: auto;
+  color: #444;
+}
+
+.philosophy-cards {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ph-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+.ph-card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.ph-card h4 {
+  color: #014680;
+  margin-bottom: 0.5rem;
+}
+
+/* Plates */
+.plate {
+  position: absolute;
+  width: 120px;
+  opacity: 0.2;
+}
+
+.plate-left { left: -30px; top: 30%; }
+.plate-right { right: -30px; top: 50%; }
+
+/* =====================
+   DAY FLOW
+===================== */
+.day-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.day-item {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+}
+
+.day-item span {
+  font-size: 2rem;
+}
+
+/* =====================
+   WHY LIST
+===================== */
+.why-list {
+  list-style: none;
+  padding: 0;
+}
+
+.why-list li {
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+/* =====================
+   CTA
+===================== */
+.about-cta {
+  background: linear-gradient(90deg, #cae5ff, #464646);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.about-cta h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-cta p {
+  margin-bottom: 1.8rem;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #014680;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 992px) {
+  .split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .philosophy-cards,
+  .day-flow {
+    grid-template-columns: 1fr;
+  }
+}
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 576px) {
+  /* About Hero */
+  .about-hero {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-badge {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .cloud,
+  .birds,
+  .plate {
+    display: none; /* hide decorative elements on small screens */
+  }
+
+  /* About Section */
+  .about-section {
+    padding: 3rem 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .about-image img {
+    border-radius: 16px;
+  }
+
+  /* Philosophy Cards */
+  .philosophy-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ph-card {
+    padding: 1.5rem;
+  }
+
+  .ph-card img {
+    width: 50px;
+    margin-bottom: 0.8rem;
+  }
+
+  .ph-card h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Day Flow */
+  .day-flow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .day-item {
+    padding: 1.2rem;
+  }
+
+  .day-item span {
+    font-size: 1.5rem;
+  }
+
+  /* CTA */
+  .about-cta {
+    padding: 3rem 1rem;
+  }
+
+  .about-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-cta p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Why List */
+  .why-list li {
+    font-size: 0.95rem;
+  }
+}
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+@media (max-width: 576px) {
+  /* Existing mobile styles... */
+
+  /* Reverse split: image first, text second */
+  .split.reverse {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .split.reverse .about-image {
+    order: 1; /* image first */
+    margin-bottom: 1.5rem; /* spacing below image */
+  }
+
+  .split.reverse .about-text {
+    order: 2; /* text second */
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kindergarten Life | Tiny Birds</title>
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="../CSS/kindergardenLife.css" />
+
+  <!-- Header & Footer CSS -->
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+</head>
+<body>
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Load Header -->
+<div id="header-placeholder"></div>
+<script>
+  fetch("./header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // ✅ IMPORTANT: init AFTER header loads
+      if (typeof initHeader === "function") {
+        initHeader();
+      }
+    })
+    .catch(err => console.error("Header load error:", err));
+</script>
+
+<script src="/JS/header.js"></script>
+  <!-- Floating Background Elements -->
+  <img src="../Assets/KindergarderLife/Cloud.png" class="cloud cloud-1" alt="">
+  <img src="../Assets/KindergarderLife/Cloud-1.png" class="cloud cloud-2" alt="">
+
+  <img src="../Assets/KindergarderLife/Bird.png" class="bird bird-1" alt="">
+  <img src="../Assets/KindergarderLife/Bird-1.png" class="bird bird-2" alt="">
+  <img src="../Assets/KindergarderLife/Birds.png" class="bird bird-3" alt="">
+
+  <!-- Main Content -->
+  <main class="life-wrapper">
+
+    <section class="intro">
+      <h1>Life at Tiny Birds Kindergarten</h1>
+      <p>
+        Every day at Tiny Birds is filled with laughter, learning, and little
+        moments that help children grow with confidence and joy.
+      </p>
+    </section>
+
+    <section class="life-section">
+      <h2>A Happy Daily Routine</h2>
+      <p>
+        Our day begins with warm welcomes, followed by play-based learning,
+        creative activities, story time, and peaceful rest moments.
+      </p>
+    </section>
+
+    <section class="life-section">
+      <h2>Learning Through Play</h2>
+      <p>
+        Children explore colors, music, stories, and movement through guided
+        play. Learning happens naturally as curiosity leads the way.
+      </p>
+    </section>
+
+    <section class="life-section">
+      <h2>Care, Safety & Comfort</h2>
+      <p>
+        Our experienced teachers ensure a clean, safe, and caring environment
+        where every child is supervised, supported, and respected.
+      </p>
+    </section>
+
+    <section class="life-section">
+      <h2>Growing Together</h2>
+      <p>
+        At Tiny Birds, children build friendships, learn kindness, and develop
+        confidence — preparing them gently for the next stage of learning.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Footer -->
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error("Footer load error:", err));
+  </script>
+
+  <!-- Page JS -->
+  <script src="/JS/kindergardenLife.js"></script>
+
+</body>
+</html>

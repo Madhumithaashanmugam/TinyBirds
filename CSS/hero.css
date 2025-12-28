@@ -1,0 +1,306 @@
+/* =====================================================
+   HERO SECTION – WRAPPER
+===================================================== */
+
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, #fffbf3 0%, #fff0c1 100%);
+  padding: 5rem 1.5rem 12rem;
+  overflow: visible;
+  margin-bottom: 15vh;
+}
+
+/* =====================================================
+   HERO MAIN CONTAINER (DESKTOP GRID)
+===================================================== */
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.hero-content {
+  z-index: 2;
+}
+
+/* Badge */
+.age-badge {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  background: linear-gradient(0deg, #dcf3ff 0%, #d1efff 100%);
+  color: #113f66;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Title */
+.hero-title {
+  margin: 1.6rem 0;
+  font-size: 3.1rem;
+  line-height: 1.22;
+  color: #014680;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  max-width: 560px;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #004885;
+}
+
+/* CTA */
+.hero-actions {
+  margin-top: 2.2rem;
+}
+
+.btn-primary-hero {
+  display: inline-block;
+  padding: 0.95rem 2.2rem;
+  border-radius: 999px;
+  background: linear-gradient(0deg, #2e89e4 0%, #55abff 100%);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Tags */
+.hero-tags {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ffffff 0%, #fbf4ec 100%);
+  color: #585547;
+  font-size: 0.9rem;
+}
+
+/* =====================================================
+   RIGHT VISUAL (IMAGE + FLOATING ELEMENTS)
+===================================================== */
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.visual-wrapper {
+  position: relative;
+  width: 380px;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 36px;
+  display: block;
+}
+
+/* =====================================================
+   DECORATIVE BIRDS
+===================================================== */
+
+.bird {
+  position: absolute;
+}
+
+.green-bird {
+  top: -34px;
+  right: -28px;
+  width: 140px;
+}
+
+.blue-bird {
+  top: 22%;
+  left: -32px;
+  width: 70px;
+}
+
+/* =====================================================
+   ACTIVITY PANEL (OVER IMAGE)
+===================================================== */
+
+.activity-panel {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(90deg, #ffffff 71.63%, #d6f1ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+.panel-header {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #014680;
+  margin-bottom: 0.6rem;
+}
+
+.panel-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.panel-item img {
+  width: 22px;
+  height: 22px;
+}
+
+/* =====================================================
+   HERO INFO BAR (HALF IN / HALF OUT)
+===================================================== */
+
+.hero-info {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  z-index: 5;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  max-width: 1050px;
+  width: calc(100% - 2rem);
+  padding: 1.8rem 2.4rem;
+
+  background: #ffffff;
+  border: 2px solid #eeeae9;
+  border-radius: 20px;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.14);
+}
+
+/* Info Items */
+.info-item {
+  text-align: center;
+  padding: 0 1.2rem;
+  position: relative;
+}
+
+/* Vertical separator (DESKTOP ONLY) */
+.info-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 0;
+  width: 1px;
+  height: 70%;
+  background: #e6e6e6;
+}
+
+.info-item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #014680;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+/* =====================================================
+   RESPONSIVE – TABLET (≤ 992px)
+===================================================== */
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    margin-bottom: 10vh;
+    text-align: center;
+  }
+
+  .hero-visual {
+    margin-top: 3.5rem;
+  }
+
+  .visual-wrapper {
+    width: 320px;
+  }
+
+  .hero-info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* REMOVE SEPARATORS */
+  .info-item::after {
+    display: none;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE – MOBILE (≤ 576px)
+===================================================== */
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .visual-wrapper {
+    width: 280px;
+  }
+
+  .hero-info {
+    grid-template-columns: 1fr;
+    padding: 1.6rem;
+    transform: translate(-50%, 60%);
+  }
+
+  /* REMOVE SEPARATORS */
+  .info-item::after {
+    display: none;
+  }
+}
+
+/* =====================================================
+   CENTER ALIGNMENT ADJUSTMENTS
+===================================================== */
+
+@media (max-width: 1024px) {
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 680px;
+  }
+
+  .hero-tags {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+}

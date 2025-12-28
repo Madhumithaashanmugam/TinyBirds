@@ -1,0 +1,357 @@
+
+
+
+.programs-section {
+  position: relative;
+  background: #fffaf5;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.programs-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* DECORATIONS */
+.cloud {
+  position: absolute;
+  z-index: 1;
+}
+
+.cloud-left {
+  top: 40px;
+  left: 0;
+  width: 280px;
+}
+
+.cloud-right {
+  top: 120px;
+  right: 0;
+  width: 260px;
+}
+
+.birds {
+  position: absolute;
+  top: 30px;
+  right: 45%;
+  width: 120px;
+}
+
+.plant {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  width: 160px;
+}
+
+/* LEFT */
+.programs-left {
+  flex: 1.1;
+}
+
+.programs-left h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #063a4a;
+  line-height: 1.2;
+  position: relative;
+}
+
+.title-bird {
+  width: 40px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.subtitle {
+  margin-top: 16px;
+  max-width: 420px;
+  color: #4f6d75;
+  font-size: 15px;
+}
+
+.program-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.program-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  width: 220px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.program-card .icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.program-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #063a4a;
+}
+
+.program-card .age {
+  font-size: 13px;
+  color: #6b8b94;
+}
+
+.program-card ul {
+  padding: 0;
+  list-style: none;
+  margin: 14px 0;
+}
+
+.program-card li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #355b66;
+}
+
+.program-card button {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* CARD COLORS */
+.nursery {
+  background: #fff4dc;
+}
+
+.nursery button {
+  background: #ffb703;
+  color: #000;
+}
+
+.lkg {
+  background: #fff0c7;
+}
+
+.lkg button {
+  background: #ff9f1c;
+  color: #000;
+}
+
+.ukg {
+  background: #e9f7ec;
+}
+
+.ukg button {
+  background: #2fb344;
+  color: #fff;
+}
+
+/* RIGHT */
+.programs-right {
+  flex: 0.9;
+  position: relative;
+}
+
+.student-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.student-card img {
+  width: 100%;
+  display: block;
+}
+
+.floating-profiles {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.floating-profiles img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* DAY CARD */
+.day-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 260px;
+}
+
+.day-card h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #063a4a;
+}
+
+.day-card p {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #4f6d75;
+}
+
+.day-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.day-card li {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+/* ============================
+   LARGE TABLETS / SMALL LAPTOPS
+   ============================ */
+@media (max-width: 1200px) {
+  .programs-container {
+    padding: 0 24px;
+    gap: 40px;
+  }
+
+  .program-cards {
+    flex-wrap: wrap;
+  }
+
+  .program-card {
+    width: 200px;
+  }
+
+  .day-card {
+    right: 20px;
+  }
+}
+
+/* ============================
+   TABLETS
+   ============================ */
+@media (max-width: 992px) {
+  .programs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .programs-left,
+  .programs-right {
+    width: 100%;
+  }
+
+  .programs-left h2 {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .program-cards {
+    justify-content: center;
+  }
+
+  .programs-right {
+    margin-top: 60px;
+  }
+
+  .day-card {
+    position: static;
+    margin: 24px auto 0;
+  }
+
+  .cloud-left,
+  .cloud-right,
+  .birds,
+  .plant {
+    display: none;
+  }
+}
+
+/* ============================
+   LARGE PHONES
+   ============================ */
+@media (max-width: 768px) {
+  .programs-section {
+    padding: 70px 0;
+  }
+
+  .programs-left h2 {
+    font-size: 34px;
+  }
+
+  .program-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .program-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .student-card img {
+    border-radius: 20px;
+  }
+}
+
+/* ============================
+   SMALL PHONES
+   ============================ */
+@media (max-width: 480px) {
+  .programs-left h2 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .program-card {
+    padding: 20px;
+  }
+
+  .program-card h3 {
+    font-size: 18px;
+  }
+
+  .program-card li {
+    font-size: 12px;
+  }
+
+  .program-card button {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  .day-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .day-card h4 {
+    font-size: 18px;
+  }
+
+  .day-card p,
+  .day-card li {
+    font-size: 12px;
+  }
+}

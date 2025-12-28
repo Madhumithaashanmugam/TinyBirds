@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny Birds Kindergarten</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/Aday.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/programs.css" />
+  <link rel="stylesheet" href="css/facilites.css" />
+  <link rel="stylesheet" href="css/admissions.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+
+
+</head>
+<body>
+
+  <!-- Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+<script>
+  fetch("partials/header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // ✅ IMPORTANT: init AFTER header loads
+      if (typeof initHeader === "function") {
+        initHeader();
+      }
+    })
+    .catch(err => console.error("Header load error:", err));
+</script>
+
+<!-- Header JS -->
+<script src="JS/header.js"></script>
+
+
+
+<section class="hero">
+  <div class="hero-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+      <span class="age-badge">For little learners aged 2–6</span>
+
+      <h1 class="hero-title">
+        A magical kindergarten where<br />
+        tiny birds learn to fly
+      </h1>
+
+      <p class="hero-subtitle">
+        A play-based, nurturing environment where children blossom,
+        explore, and discover their wings.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/partials/contact.html" class="btn-primary-hero">Book a Campus Tour</a>
+      </div>
+
+      <div class="hero-tags">
+        <span class="tag">Kindergarten-Only</span>
+       <span class="tag">NEET &amp; Hygienic Campus</span>
+
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-visual">
+      <div class="visual-wrapper">
+        <img
+          src="Assets/Hero/main image.png"
+          alt="Children learning"
+          class="hero-main-img"
+        />
+
+        <img src="Assets/Hero/Green Bird.png" class="bird green-bird" alt="" />
+        <img src="Assets/Hero/Blue Bird.png" class="bird blue-bird" alt="" />
+
+        <div class="activity-panel">
+          <div class="panel-header">Working Hours</div>
+
+          <div class="panel-item">
+            <img src="Assets/Hero/Paint.png" alt="" />
+            <span>Monday - Friday</span>
+          </div>
+
+          <div class="panel-item">
+            <img src="Assets/Hero/Puzzle.png" alt="" />
+            <span>9:30 AM - 3:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HERO INFO (HALF IN / HALF OUT) -->
+  <div class="hero-info">
+    <div class="info-item">
+      <h4>Age Group</h4>
+      <p>Nursery to UKG<br />(2–6 years)</p>
+    </div>
+<div class="info-item">
+  <h4>Learning Style</h4>
+  <p>Play-Based<br />Activity Learning</p>
+</div>
+
+
+    <div class="info-item">
+      <h4>Location</h4>
+      <p>Street Area,<br />City, State</p>
+    </div>
+
+    <div class="info-item">
+      <h4>Seats</h4>
+      <p>2025–26<br />Admissions Open</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- A DAY AT TINY BIRDS -->
+<section class="aday-section">
+
+  <div class="aday-bg">
+    <img src="Assets/ADay/background image.png" alt="">
+  </div>
+
+  <div class="aday-container">
+
+    <h2 class="aday-title">A day at Tiny Birds</h2>
+
+    <div class="aday-cards">
+
+      <!-- CARD 1 -->
+      <div class="aday-card card-yellow">
+        <div class="card-image">
+          <img src="Assets/ADay/kids image 1.png" alt="Caring Hearts">
+        </div>
+
+        <h3>Caring Hearts</h3>
+
+        <ul>
+          <li>Socially fostering</li>
+          <li>Help team as a team</li>
+        </ul>
+
+        <a href="/partials/KindergardenLife.html" class="card-btn">View Details</a>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="aday-card card-blue">
+        <div class="card-image">
+          <img src="Assets/ADay/kids image 2.png" alt="Curious Minds">
+        </div>
+
+        <h3>Curious Minds</h3>
+
+        <ul>
+          <li>Build new patience</li>
+          <li>Expect / act visual</li>
+        </ul>
+
+        <a href="/partials/KindergardenLife.html" class="card-btn">View Details</a>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="aday-card card-orange">
+        <div class="card-image">
+          <img src="Assets/ADay/kids image 3.png" alt="Active Bodies">
+        </div>
+
+        <h3>Active Bodies</h3>
+
+        <ul>
+          <li>Impact lab vitality</li>
+          <li>Enabling on habits</li>
+        </ul>
+
+<a href="/partials/KindergardenLife.html" class="card-btn">View Details</a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+<section class="programs-section">
+  <!-- Decorative assets -->
+  <img src="../../../Assets/Programs/Cloud.png" class="cloud cloud-left" alt="" />
+  <img src="../../../Assets/Programs/Cloud (1).png" class="cloud cloud-right" alt="" />
+  <img src="../../../Assets/Programs/Birds.png" class="birds" alt="" />
+
+  <div class="programs-container">
+    <!-- LEFT -->
+    <div class="programs-left">
+      <h2>
+        Programs for <br />
+        every little bird
+        <img src="../../../Assets/Programs/Bird.png" alt="" class="title-bird" />
+      </h2>
+
+      <p class="subtitle">
+        Thoughtfully designed early childhood programs that support growth,
+        learning, and joyful exploration at every stage.
+      </p>
+
+      <div class="program-cards">
+        <!-- DAY CARE -->
+        <div class="program-card nursery">
+          <div class="icon">🧸</div>
+          <h3>Day Care</h3>
+          <span class="age">1.5 – 3 years</span>
+          <ul>
+            <li>Safe and nurturing environment</li>
+            <li>Routine-based care & comfort</li>
+            <li>Emotional bonding and play</li>
+          </ul>
+        </div>
+
+        <!-- PLAY CLASS -->
+        <div class="program-card lkg">
+          <div class="icon">🎈</div>
+          <h3>Play Class</h3>
+          <span class="age">3 – 4 years</span>
+          <ul>
+            <li>Interactive play-based learning</li>
+            <li>Social skills & group activities</li>
+            <li>Music, movement & storytelling</li>
+          </ul>
+        </div>
+
+        <!-- NURSERY -->
+        <div class="program-card ukg">
+          <div class="icon">🌼</div>
+          <h3>Nursery</h3>
+          <span class="age">4 – 5 years</span>
+          <ul>
+            <li>Early literacy & numeracy</li>
+            <li>Creative thinking activities</li>
+            <li>Confidence & school readiness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="programs-right">
+      <div class="student-card">
+        <img src="../../../Assets/Programs/student.png" alt="Students" />
+        <div class="floating-profiles">
+          <img src="../../../Assets/Programs/Profile (2).png" alt="" />
+          <img src="../../../Assets/Programs/Profile (3).png" alt="" />
+        </div>
+      </div>
+
+      <div class="day-card">
+        <h4>
+          A day at <br />
+          Tiny Birds
+        </h4>
+        <p>
+          Each day is filled with joyful routines, guided activities, creative
+          expression, and caring interactions that help children feel happy and secure.
+        </p>
+        <ul>
+          <li>🎨 Creative Activities</li>
+          <li>📖 Story & Circle Time</li>
+          <li>🌳 Outdoor Play</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="facilities-section">
+  <div class="facilities-container">
+    <!-- LEFT -->
+    <div class="facilities-left">
+      <h2>Our Campus & Facilities</h2>
+      <p class="subtitle">
+        We offer age-specific programs designed to foster growth and curiosity
+      </p>
+
+      <div class="featured-card">
+        <img
+          src="../../../Assets/facilites/classroom image place holder.png"
+          alt="Library"
+        />
+        <h4>Library</h4>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="facilities-right">
+      <div class="facility-card">
+        <img src="../../../Assets/facilites/classroom image place holder.png" />
+        <span>Outdoor Play Area</span>
+      </div>
+
+      <div class="facility-card">
+        <img src="../../../Assets/facilites/classroom image place holder.png" />
+        <span>Library & Reading Corner</span>
+      </div>
+
+      <div class="facility-card">
+        <img src="../../../Assets/facilites/classroom image place holder.png" />
+        <span>Colorful Classrooms</span>
+      </div>
+
+      <div class="facility-card">
+        <img src="../../../Assets/facilites/classroom image place holder.png" />
+        <span>Sand Pit</span>
+      </div>
+
+      <div class="facility-card">
+        <img src="../../../Assets/facilites/classroom image place holder.png" />
+        <span>Activity Center</span>
+      </div>
+
+      <div class="facility-card">
+        <img src="../../../Assets/facilites/classroom image place holder.png" />
+        <span>Cozy Learning Corners</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="admissions-section">
+  <div class="admissions-card">
+    <h2>
+      Admissions for 2025-26 <br />
+      are now open
+    </h2>
+
+    <p>
+      Limited seats in Nursery, LKG and UKG. Schedule <br />
+      your visit now.
+    </p>
+
+  <div class="admissions-actions">
+  <a href="/partials/contact.html" class="btn-primary-hero">
+    Start Admission Enquiry
+  </a>
+</div>
+
+  </div>
+</section>
+
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("partials/footer.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+
+
+
+<script src="js/header.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
