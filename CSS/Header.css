@@ -39,7 +39,7 @@ body {
 .header-container {
   max-width: 1280px;
   margin: auto;
-  padding: 50px 24px;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,9 +56,17 @@ body {
   gap: 12px;
 }
 
-.logo img {
-  width: 58px;
+.logo {
+  position: relative;
+  z-index: 9999; /* Higher than clouds, decorations, header background */
 }
+
+.logo img {
+  width: 128px;
+  position: relative;
+  z-index: 10000;
+}
+
 
 .logo-title {
   font-size: 28px;
@@ -169,13 +177,13 @@ body {
    CLOUDS (BOTTOM)
 ========================= */
 .cloud-yellow-1 {
-  left: 0;
+  left: 180px;
   bottom: -25px;
   width: 240px;
 }
 
 .cloud-yellow-2 {
-  left: 170px;
+  left: 290px;
   bottom: -15px;
   width: 200px;
 }
@@ -197,7 +205,7 @@ body {
 ========================= */
 .decor-abc {
   right: 430px;
-  top: 65px;
+  top: 85px;
   width: 95px;
 }
 

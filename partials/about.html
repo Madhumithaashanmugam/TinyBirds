@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Tiny Birds Kindergarten</title>
+  <title>About Us – Tiny Buds Learning Studio</title>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,9 @@
 </head>
 <body>
 
-<!-- Header -->
+<!-- =====================
+     HEADER
+===================== -->
 <div id="header-placeholder"></div>
 <script>
   fetch("./header.html")
@@ -27,7 +29,6 @@
     .then(data => {
       document.getElementById("header-placeholder").innerHTML = data;
 
-      // ✅ IMPORTANT: init AFTER header loads
       if (typeof initHeader === "function") {
         initHeader();
       }
@@ -36,20 +37,22 @@
 </script>
 
 <script src="/JS/header.js"></script>
+
 <!-- =========================
      ABOUT HERO
 ========================= -->
 <section class="about-hero">
   <img src="/Assets/About/cloud.png" class="cloud cloud-left" alt="">
   <img src="/Assets/About/cloud.png" class="cloud cloud-right" alt="">
-  <img src="/Assets/About/birds.png" class="birds" alt="">
+  <!-- Replace birds.png with a neutral / growth-themed illustration if available -->
+  <img src="/Assets/About/growth.png" class="birds" alt="">
 
   <div class="about-hero-content">
-    <span class="about-badge">About Tiny Birds</span>
-    <h1>Where little wings grow strong</h1>
+    <span class="about-badge">About Tiny Buds</span>
+    <h1>Where little minds grow with care</h1>
     <p>
-      Tiny Birds Kindergarten is a warm, nurturing space where early childhood
-      education meets love, care, and joyful learning.
+      Tiny Buds Learning Studio is a warm, nurturing space where early childhood
+      education is built on care, curiosity, and joyful learning.
     </p>
   </div>
 </section>
@@ -62,12 +65,12 @@
     <div class="about-text">
       <h2>Who We Are</h2>
       <p>
-        Tiny Birds Kindergarten is dedicated exclusively to early childhood education.
+        Tiny Buds Learning Studio is dedicated exclusively to early childhood education.
         We believe every child deserves a safe, playful, and encouraging environment
         to explore, imagine, and grow.
       </p>
       <p>
-        Our curriculum blends structured learning with creative play, ensuring children
+        Our curriculum blends structured learning with creative play, helping children
         develop emotionally, socially, physically, and intellectually.
       </p>
     </div>
@@ -88,39 +91,39 @@
   <div class="about-container center">
     <h2>Our Philosophy</h2>
     <p class="center-text">
-      We believe learning should be joyful, meaningful, and rooted in curiosity.
-      Every activity is designed to help children feel confident, valued, and excited
-      to learn.
+      We believe learning should be joyful, meaningful, and guided by curiosity.
+      Every experience is designed to help children feel confident, valued,
+      and excited to learn.
     </p>
 
     <div class="philosophy-cards">
       <div class="ph-card">
-        <img src="Assets/About/bird-blue.png" alt="">
+        <img src="Assets/About/learning.png" alt="">
         <h4>Play-Based Learning</h4>
-        <p>Children learn best through hands-on play and exploration.</p>
+        <p>Children learn best through hands-on play and real-world exploration.</p>
       </div>
 
       <div class="ph-card">
-        <img src="Assets/About/bird-green.png" alt="">
-        <h4>Emotional Growth</h4>
-        <p>We nurture kindness, empathy, and self-expression.</p>
+        <img src="Assets/About/emotion.png" alt="">
+        <h4>Emotional Development</h4>
+        <p>We nurture kindness, empathy, communication, and self-expression.</p>
       </div>
 
       <div class="ph-card">
-        <img src="Assets/About/bird-yellow.png" alt="">
-        <h4>Safe & Loving Care</h4>
-        <p>A secure environment where children feel happy and protected.</p>
+        <img src="Assets/About/safety.png" alt="">
+        <h4>Safe & Caring Environment</h4>
+        <p>A secure, hygienic space where children feel happy and protected.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- =========================
-     A DAY AT TINY BIRDS
+     A DAY AT TINY BUDS
 ========================= -->
 <section class="about-section">
   <div class="about-container">
-    <h2 class="center-text">A Day at Tiny Birds</h2>
+    <h2 class="center-text">A Day at Tiny Buds</h2>
 
     <div class="day-flow">
       <div class="day-item">
@@ -133,7 +136,7 @@
       </div>
       <div class="day-item">
         <span>🎵</span>
-        <p>Music, movement & dance</p>
+        <p>Music, movement & rhythm</p>
       </div>
       <div class="day-item">
         <span>🌳</span>
@@ -144,17 +147,17 @@
 </section>
 
 <!-- =========================
-     WHY TINY BIRDS
+     WHY TINY BUDS
 ========================= -->
 <section class="about-section soft-bg">
   <div class="about-container split reverse">
     <div class="about-text">
-      <h2>Why Parents Choose Tiny Birds</h2>
+      <h2>Why Parents Choose Tiny Buds</h2>
       <ul class="why-list">
-        <li>✔ Kindergarten-only focused learning</li>
-        <li>✔ Trained, caring educators</li>
+        <li>✔ Kindergarten-focused learning</li>
+        <li>✔ Trained and caring educators</li>
         <li>✔ Safe, colorful classrooms</li>
-        <li>✔ Strong parent-teacher connection</li>
+        <li>✔ Strong parent–teacher partnership</li>
       </ul>
     </div>
 
@@ -168,17 +171,21 @@
      CTA
 ========================= -->
 <section class="about-cta">
-  <h2>Come visit Tiny Birds</h2>
-  <p>See how we help little learners spread their wings.</p>
+  <h2>Come visit Tiny Buds Learning Studio</h2>
+  <p>See how we support your child’s early learning journey.</p>
   <a href="/partials/contact.html" class="btn-primary">Book a Campus Tour</a>
 </section>
 
-<!-- Footer -->
+<!-- =====================
+     FOOTER
+===================== -->
 <div id="footer-placeholder"></div>
 <script>
   fetch("/partials/footer.html")
     .then(res => res.text())
-    .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
 </script>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us – Tiny Birds Kindergarten</title>
+  <title>Contact Us – Tiny Buds Learning Studio</title>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,22 +22,22 @@
   <!-- =====================
        HEADER
   ====================== -->
-<div id="header-placeholder"></div>
-<script>
-  fetch("./header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("./header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
 
-      // ✅ IMPORTANT: init AFTER header loads
-      if (typeof initHeader === "function") {
-        initHeader();
-      }
-    })
-    .catch(err => console.error("Header load error:", err));
-</script>
+        // IMPORTANT: init AFTER header loads
+        if (typeof initHeader === "function") {
+          initHeader();
+        }
+      })
+      .catch(err => console.error("Header load error:", err));
+  </script>
 
-<script src="/JS/header.js"></script>
+  <script src="/JS/header.js"></script>
 
   <!-- =====================
        CONTACT SECTION
@@ -53,16 +53,16 @@
       <!-- INFO -->
       <div class="contact-info">
         <span class="contact-badge">Contact Us</span>
-        <h2>Get in Touch with Tiny Birds</h2>
+        <h2>Get in Touch with Tiny Buds Learning Studio</h2>
         <p>
-          We’re here to support you and your little one. Reach out to us for
-          admissions enquiries, program details, or to schedule a campus visit.
+          We’re here to support you and your child. Reach out to us for
+          admission enquiries, program details, or to schedule a campus visit.
         </p>
 
         <ul class="contact-points">
-          <li>✔ Friendly & responsive team</li>
+          <li>✔ Friendly and responsive team</li>
           <li>✔ Quick admission assistance</li>
-          <li>✔ Safe & nurturing environment</li>
+          <li>✔ Safe and nurturing learning environment</li>
         </ul>
       </div>
 
@@ -83,7 +83,7 @@
             <label>Email or Mobile Number</label>
             <input
               type="text"
-              placeholder="Enter email or phone number"
+              placeholder="Enter your email or phone number"
               required
             />
           </div>
@@ -107,15 +107,17 @@
     </div>
   </section>
 
-
-
-<!-- Footer -->
-<div id="footer-placeholder"></div>
-<script>
-  fetch("/partials/footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-</script>
+  <!-- =====================
+       FOOTER
+  ====================== -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("/partials/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>
