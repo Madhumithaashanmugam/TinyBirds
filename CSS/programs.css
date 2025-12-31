@@ -1,9 +1,6 @@
-
-
-
 .programs-section {
   position: relative;
-  background: #fffaf5;
+  background: linear-gradient(180deg, #fffaf5, #ffffff);
   padding: 100px 0;
   overflow: hidden;
 }
@@ -15,38 +12,33 @@
   gap: 60px;
   position: relative;
   z-index: 2;
+  padding: 0 24px;
 }
 
-/* DECORATIONS */
+/* DECOR */
 .cloud {
   position: absolute;
   z-index: 1;
+  opacity: 0.9;
 }
 
 .cloud-left {
-  top: 40px;
-  left: 0;
-  width: 280px;
+  top: 30px;
+  left: -40px;
+  width: 260px;
 }
 
 .cloud-right {
   top: 120px;
-  right: 0;
-  width: 260px;
+  right: -40px;
+  width: 240px;
 }
 
 .birds {
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 45%;
   width: 120px;
-}
-
-.plant {
-  position: absolute;
-  bottom: 0;
-  left: 40px;
-  width: 160px;
 }
 
 /* LEFT */
@@ -59,44 +51,48 @@
   font-weight: 700;
   color: #063a4a;
   line-height: 1.2;
-  position: relative;
 }
 
-.title-bird {
-  width: 40px;
-  margin-left: 10px;
+.title-bud {
+  width: 42px;
+  margin-left: 8px;
   vertical-align: middle;
 }
 
 .subtitle {
   margin-top: 16px;
-  max-width: 420px;
+  max-width: 440px;
   color: #4f6d75;
   font-size: 15px;
 }
 
 .program-cards {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
   margin-top: 36px;
 }
 
+/* PROGRAM CARD */
 .program-card {
-  background: #fff;
-  border-radius: 18px;
-  padding: 24px;
-  width: 220px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
 }
 
 .program-card .icon {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
 .program-card h3 {
-  margin: 0;
   font-size: 20px;
+  margin: 0;
   color: #063a4a;
 }
 
@@ -106,52 +102,22 @@
 }
 
 .program-card ul {
-  padding: 0;
   list-style: none;
-  margin: 14px 0;
+  padding: 0;
+  margin-top: 14px;
 }
 
 .program-card li {
   font-size: 13px;
-  margin-bottom: 6px;
   color: #355b66;
-}
-
-.program-card button {
-  border: none;
-  border-radius: 20px;
-  padding: 8px 16px;
-  font-size: 13px;
-  cursor: pointer;
+  margin-bottom: 6px;
 }
 
 /* CARD COLORS */
-.nursery {
-  background: #fff4dc;
-}
-
-.nursery button {
-  background: #ffb703;
-  color: #000;
-}
-
-.lkg {
-  background: #fff0c7;
-}
-
-.lkg button {
-  background: #ff9f1c;
-  color: #000;
-}
-
-.ukg {
-  background: #e9f7ec;
-}
-
-.ukg button {
-  background: #2fb344;
-  color: #fff;
-}
+.nursery { background: #fff4dc; }
+.lkg { background: #fff0c7; }
+.ukg { background: #e9f7ec; }
+.sr-buds { background: #eef3ff; }
 
 /* RIGHT */
 .programs-right {
@@ -160,9 +126,9 @@
 }
 
 .student-card {
-  position: relative;
-  border-radius: 24px;
+  border-radius: 26px;
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 .student-card img {
@@ -179,27 +145,27 @@
 }
 
 .floating-profiles img {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 
 /* DAY CARD */
 .day-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 22px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
   position: absolute;
   right: 0;
-  bottom: -10px;
-  width: 260px;
+  bottom: 20px;
+  width: 470px;
 }
 
 .day-card h4 {
-  margin: 0;
   font-size: 20px;
+  margin: 0;
   color: #063a4a;
 }
 
@@ -218,46 +184,16 @@
   font-size: 13px;
   margin-bottom: 6px;
 }
-/* ============================
-   LARGE TABLETS / SMALL LAPTOPS
-   ============================ */
-@media (max-width: 1200px) {
-  .programs-container {
-    padding: 0 24px;
-    gap: 40px;
-  }
 
-  .program-cards {
-    flex-wrap: wrap;
-  }
+/* ================= RESPONSIVE ================= */
 
-  .program-card {
-    width: 200px;
-  }
-
-  .day-card {
-    right: 20px;
-  }
-}
-
-/* ============================
-   TABLETS
-   ============================ */
 @media (max-width: 992px) {
   .programs-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .programs-left,
-  .programs-right {
-    width: 100%;
-  }
-
-  .programs-left h2 {
-    text-align: center;
-  }
-
+  .programs-left h2,
   .subtitle {
     text-align: center;
     margin-left: auto;
@@ -265,6 +201,7 @@
   }
 
   .program-cards {
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
   }
 
@@ -277,45 +214,27 @@
     margin: 24px auto 0;
   }
 
-  .cloud-left,
-  .cloud-right,
-  .birds,
-  .plant {
+  .cloud,
+  .birds {
     display: none;
   }
 }
 
-/* ============================
-   LARGE PHONES
-   ============================ */
 @media (max-width: 768px) {
-  .programs-section {
-    padding: 70px 0;
+  .program-cards {
+    grid-template-columns: 1fr;
   }
 
   .programs-left h2 {
     font-size: 34px;
   }
-
-  .program-card {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .program-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .student-card img {
-    border-radius: 20px;
-  }
 }
 
-/* ============================
-   SMALL PHONES
-   ============================ */
 @media (max-width: 480px) {
+  .programs-section {
+    padding: 70px 0;
+  }
+
   .programs-left h2 {
     font-size: 28px;
   }
@@ -325,33 +244,10 @@
   }
 
   .program-card {
-    padding: 20px;
-  }
-
-  .program-card h3 {
-    font-size: 18px;
-  }
-
-  .program-card li {
-    font-size: 12px;
-  }
-
-  .program-card button {
-    font-size: 12px;
-    padding: 7px 14px;
+    padding: 22px;
   }
 
   .day-card {
     width: 100%;
-    padding: 18px;
-  }
-
-  .day-card h4 {
-    font-size: 18px;
-  }
-
-  .day-card p,
-  .day-card li {
-    font-size: 12px;
   }
 }

@@ -116,6 +116,14 @@ body {
   gap: 2rem;
 }
 
+.center-text {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+
 .ph-card {
   background: #fff;
   padding: 2rem;

@@ -36,8 +36,8 @@
   display: inline-block;
   padding: 0.6rem 1.3rem;
   border-radius: 999px;
-  background: linear-gradient(0deg, #dcf3ff 0%, #d1efff 100%);
-  color: #113f66;
+  background: #FFC3DA;
+  color: #C2004B;
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -47,7 +47,7 @@
   margin: 1.6rem 0;
   font-size: 3.1rem;
   line-height: 1.22;
-  color: #014680;
+  color: #004E9D;
 }
 
 /* Subtitle */
@@ -67,7 +67,7 @@
   display: inline-block;
   padding: 0.95rem 2.2rem;
   border-radius: 999px;
-  background: linear-gradient(0deg, #2e89e4 0%, #55abff 100%);
+  background: linear-gradient(0deg, #007BC9 0%, #47B8FF 100%);
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;

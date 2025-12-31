@@ -131,3 +131,8 @@
     text-align: center;
   }
 }
+
+.site-footer p a[href^="tel"],
+.site-footer p a[href^="mailto"] {
+  color: #ffffff;
+}

@@ -51,7 +51,7 @@
 
     <!-- LEFT CONTENT -->
 <div class="hero-content">
-  <span class="age-badge">For little learners aged 2–6</span>
+  <span class="age-badge">For little learners aged 0.6–10</span>
 
   <h1 class="hero-title">
     A nurturing kindergarten where<br />
@@ -67,10 +67,6 @@
     <a href="/partials/contact.html" class="btn-primary-hero">Book a Campus Tour</a>
   </div>
 
-  <div class="hero-tags">
-    <span class="tag">Kindergarten-Only</span>
-    <span class="tag">Neat &amp; Hygienic Campus</span>
-  </div>
 </div>
 
 
@@ -96,7 +92,7 @@
 
           <div class="panel-item">
             <img src="Assets/Hero/Puzzle.png" alt="" />
-            <span>9:30 AM - 3:00 PM</span>
+            <span>9:00 AM - 5:00 PM</span>
           </div>
         </div>
       </div>
@@ -108,7 +104,7 @@
   <div class="hero-info">
     <div class="info-item">
       <h4>Age Group</h4>
-      <p>Nursery to UKG<br />(2–6 years)</p>
+      <p>play class to day care<br />(0.6–10 years)</p>
     </div>
 <div class="info-item">
   <h4>Learning Style</h4>
@@ -127,6 +123,49 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="aday-popup-overlay" id="adayPopup">
+  <div class="aday-popup">
+
+    <!-- Floating Decorations -->
+    <img src="Assets/AllAssets/cloud.png" class="float cloud1">
+    <img src="Assets/AllAssets/bird.png" class="float bird1">
+    <img src="Assets/AllAssets/spark.png" class="float spark1">
+
+    <button class="popup-close">&times;</button>
+
+    <!-- SCROLLABLE CONTENT -->
+    <div class="popup-scroll">
+      <div class="popup-content">
+        <h2 id="popupTitle"></h2>
+        <div id="popupBody"></div>
+      </div>
+    </div>
+
+    <!-- FIXED BOTTOM BORDER -->
+    <div class="popup-border">
+      <img src="Assets/AllAssets/border-bottom.png" alt="">
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
 
 
 
@@ -159,7 +198,8 @@
           <li>Help team as a team</li>
         </ul>
 
-        <a href="/partials/KindergardenLife.html" class="card-btn">View Details</a>
+        <a href="javascript:void(0)" class="card-btn open-popup" data-type="caring">View Details</a>
+
 
       </div>
 
@@ -176,7 +216,8 @@
           <li>Expect / act visual</li>
         </ul>
 
-        <a href="/partials/KindergardenLife.html" class="card-btn">View Details</a>
+        <a href="javascript:void(0)" class="card-btn open-popup" data-type="curious">View Details</a>
+
 
       </div>
 
@@ -193,7 +234,8 @@
           <li>Enabling on habits</li>
         </ul>
 
-<a href="/partials/KindergardenLife.html" class="card-btn">View Details</a>
+<a href="javascript:void(0)" class="card-btn open-popup" data-type="active">View Details</a>
+
       </div>
 
     </div>
@@ -209,88 +251,94 @@
   <img src="../../../Assets/Programs/Cloud (1).png" class="cloud cloud-right" alt="" />
   <img src="../../../Assets/Programs/Birds.png" class="birds" alt="" />
 
-<div class="programs-container">
-  <!-- LEFT -->
-  <div class="programs-left">
-    <h2>
-      Programs for <br />
-      every little bud
-      <img src="../../../Assets/Programs/Bud.png" alt="" class="title-bud" />
-    </h2>
+  <div class="programs-container">
+    <!-- LEFT -->
+    <div class="programs-left">
+      <h2>
+        Programs for <br />
+        every little bud
+        <img src="../../../Assets/Programs/Bud.png" alt="" class="title-bud" />
+      </h2>
 
-    <p class="subtitle">
-      Thoughtfully designed early childhood programs that nurture growth,
-      learning, and joyful exploration at every stage.
-    </p>
-
-    <div class="program-cards">
-      <!-- DAY CARE -->
-      <div class="program-card nursery">
-        <div class="icon">🧸</div>
-        <h3>Day Care</h3>
-        <span class="age">1.5 – 3 years</span>
-        <ul>
-          <li>Safe and nurturing environment</li>
-          <li>Comforting daily routines</li>
-          <li>Emotional bonding through play</li>
-        </ul>
-      </div>
-
-      <!-- PLAY CLASS -->
-      <div class="program-card lkg">
-        <div class="icon">🎈</div>
-        <h3>Play Class</h3>
-        <span class="age">3 – 4 years</span>
-        <ul>
-          <li>Play-based learning experiences</li>
-          <li>Social skills & group interaction</li>
-          <li>Music, movement & storytelling</li>
-        </ul>
-      </div>
-
-      <!-- NURSERY -->
-      <div class="program-card ukg">
-        <div class="icon">🌼</div>
-        <h3>Nursery</h3>
-        <span class="age">4 – 5 years</span>
-        <ul>
-          <li>Early literacy & numeracy skills</li>
-          <li>Creative and critical thinking</li>
-          <li>Confidence & school readiness</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- RIGHT -->
-  <div class="programs-right">
-    <div class="student-card">
-      <img src="../../../Assets/Programs/student.png" alt="Students" />
-      <div class="floating-profiles">
-        <img src="../../../Assets/Programs/Profile (2).png" alt="" />
-        <img src="../../../Assets/Programs/Profile (3).png" alt="" />
-      </div>
-    </div>
-
-    <div class="day-card">
-      <h4>
-        A day at <br />
-        Tiny Buds Learning Studio
-      </h4>
-      <p>
-        Each day is filled with joyful routines, guided activities, creative
-        expression, and warm interactions that help children feel happy, safe,
-        and confident.
+      <p class="subtitle">
+        Thoughtfully designed early childhood programs that nurture growth,
+        learning, and joyful exploration at every stage.
       </p>
-      <ul>
-        <li>🎨 Creative Activities</li>
-        <li>📖 Story & Circle Time</li>
-        <li>🌳 Outdoor Play</li>
-      </ul>
+
+      <div class="program-cards">
+        <div class="program-card nursery">
+          <div class="icon">🧸</div>
+          <h3>Pre-Nursery</h3>
+          <span class="age">1.5 – 3 years</span>
+          <ul>
+            <li>Safe & nurturing care</li>
+            <li>Comforting daily routines</li>
+            <li>Play-based exploration</li>
+          </ul>
+        </div>
+
+        <div class="program-card lkg">
+          <div class="icon">🎈</div>
+          <h3>Nursery</h3>
+          <span class="age">3 – 4 years</span>
+          <ul>
+            <li>Creative play learning</li>
+            <li>Social interaction</li>
+            <li>Music & storytelling</li>
+          </ul>
+        </div>
+
+        <div class="program-card ukg">
+          <div class="icon">🌼</div>
+          <h3>Jr. Buds</h3>
+          <span class="age">4 – 5 years</span>
+          <ul>
+            <li>Early literacy skills</li>
+            <li>Creative expression</li>
+            <li>Confidence building</li>
+          </ul>
+        </div>
+
+        <div class="program-card sr-buds">
+          <div class="icon">🎓</div>
+          <h3>Sr. Buds</h3>
+          <span class="age">5 – 6 years</span>
+          <ul>
+            <li>School readiness</li>
+            <li>Problem solving</li>
+            <li>Independent learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="programs-right">
+      <div class="student-card">
+        <img src="../../../Assets/Programs/student.png" alt="Students" />
+        <div class="floating-profiles">
+          <!-- <img src="../../../Assets/Programs/Profile (2).png" alt="" />
+          <img src="../../../Assets/Programs/Profile (3).png" alt="" /> -->
+        </div>
+      </div>
+
+      <div class="day-card">
+        <h4>
+          A day at <br />
+          Tiny Buds Learning Studio
+        </h4>
+        <p>
+          Every day blends joyful routines, creativity, guided learning,
+          outdoor play, and warm interactions.
+        </p>
+        <ul>
+          <li>🎨 Creative Activities</li>
+          <li>📖 Circle Time</li>
+          <li>🌳 Outdoor Play</li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-
 </section>
 
 
@@ -395,6 +443,8 @@
 
 
 <script src="js/header.js"></script>
+<script src="JS/aday.js"></script>
+
 </body>
 </html>
 
