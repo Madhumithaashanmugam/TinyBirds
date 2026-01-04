@@ -10,36 +10,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Common CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/header.css" />
   <link rel="stylesheet" href="/css/footer.css" />
-
-  <!-- Contact CSS -->
   <link rel="stylesheet" href="/css/contact.css" />
 </head>
 <body>
 
-<!-- =====================
-     HEADER
-====================== -->
+<!-- HEADER -->
 <div id="header-placeholder"></div>
 <script>
   fetch("./header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
+    .then(r => r.text())
+    .then(d => {
+      document.getElementById("header-placeholder").innerHTML = d;
       if (typeof initHeader === "function") initHeader();
-    })
-    .catch(err => console.error("Header load error:", err));
+    });
 </script>
 <script src="/JS/header.js"></script>
 
-<!-- =====================
-     CONTACT SECTION
-====================== -->
+<!-- CONTACT SECTION -->
 <section class="contact-section">
 
-  <!-- Decorative Elements -->
   <img src="/Assets/Contact/cloud.png" class="contact-cloud cloud-left" alt="">
   <img src="/Assets/Contact/cloud.png" class="contact-cloud cloud-right" alt="">
 
@@ -50,58 +42,36 @@
       <span class="contact-badge">Contact Us</span>
       <h2>Get in Touch with Tiny Buds Learning Studio</h2>
       <p>
-        We’re here to support you and your child. Reach out to us for
-        admission enquiries, program details, or to schedule a campus visit.
+        We’re here to support you and your child. Reach out for admissions,
+        program details, or campus visits.
       </p>
-
-      <ul class="contact-points">
-        <li>✔ Friendly and responsive team</li>
-        <li>✔ Quick admission assistance</li>
-        <li>✔ Safe and nurturing learning environment</li>
-      </ul>
     </div>
 
     <!-- FORM -->
     <div class="contact-form-card">
-      <form
-        action="https://formspree.io/f/mojqgrgl"
-        method="POST"
-      >
 
-        <!-- Name -->
+      <!-- SUCCESS MESSAGE -->
+      <p id="form-success" style="display:none; color:green; font-weight:500;">
+        Thank you! Your enquiry has been submitted successfully.
+      </p>
+
+      <form id="contactForm">
+
         <div class="form-group">
           <label>Full Name</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your full name"
-            required
-          />
+          <input type="text" name="name" required />
         </div>
 
-        <!-- Email / Phone -->
         <div class="form-group">
           <label>Email or Mobile Number</label>
-          <input
-            type="text"
-            name="contact"
-            placeholder="Enter your email or phone number"
-            required
-          />
+          <input type="text" name="contact" required />
         </div>
 
-        <!-- Message -->
         <div class="form-group">
           <label>Message</label>
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="Type your message here..."
-            required
-          ></textarea>
+          <textarea name="message" rows="4" required></textarea>
         </div>
 
-        <!-- Optional hidden subject -->
         <input type="hidden" name="_subject" value="New Enquiry - Tiny Buds Learning Studio">
 
         <button type="submit" class="btn-primary">
@@ -114,17 +84,16 @@
   </div>
 </section>
 
-<!-- =====================
-     FOOTER
-====================== -->
+<!-- FOOTER -->
 <div id="footer-placeholder"></div>
 <script>
   fetch("/partials/footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
+    .then(r => r.text())
+    .then(d => document.getElementById("footer-placeholder").innerHTML = d);
 </script>
+
+<!-- FORM SCRIPT -->
+<script src="/JS/contact-form.js"></script>
 
 </body>
 </html>
