@@ -27,11 +27,8 @@ body {
   position: relative;
   background: #ffffff;
   overflow: hidden;
-
-  /* 👇 shadow under header */
   box-shadow: 0 6px 20px rgba(59, 59, 59, 0.08);
 }
-
 
 /* =========================
    LAYOUT
@@ -54,11 +51,8 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.logo {
   position: relative;
-  z-index: 9999; /* Higher than clouds, decorations, header background */
+  z-index: 9999;
 }
 
 .logo img {
@@ -66,7 +60,6 @@ body {
   position: relative;
   z-index: 10000;
 }
-
 
 .logo-title {
   font-size: 28px;
@@ -138,7 +131,7 @@ body {
 }
 
 /* =========================
-   DECOR BASE (ALL IMAGES)
+   DECOR BASE
 ========================= */
 .decor {
   position: absolute;
@@ -174,7 +167,7 @@ body {
 }
 
 /* =========================
-   CLOUDS (BOTTOM)
+   CLOUDS
 ========================= */
 .cloud-yellow-1 {
   left: 180px;
@@ -210,31 +203,20 @@ body {
 }
 
 /* =========================
-   LEAVES (RIGHT SIDE)
+   LEAVES
 ========================= */
 .leaf {
   width: 48px;
 }
 
-.leaf-1 {
-      right: 125px;
-  top: 100px;
-}
-
-.leaf-2 {
-      right: 90px;
-  top: 100px;
-}
-
-.leaf-3 {
-      right: 45px;
-  top: 100px;
-}
+.leaf-1 { right: 125px; top: 100px; }
+.leaf-2 { right: 90px;  top: 100px; }
+.leaf-3 { right: 45px;  top: 100px; }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE (ONLY MOBILE)
 ========================= */
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
 
   .hamburger {
     display: flex;
@@ -263,34 +245,7 @@ body {
     right: 0;
   }
 
-  /* Hide decor on small screens */
   .decor {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
